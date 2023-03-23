@@ -40,6 +40,24 @@ public class LinkedList {
     length = 0;
   }
 
+  public Node removeLast() {
+    if (head == null) return null;
+    Node temp = head;
+    Node pre = head;
+    while (temp.next != null) {
+      pre = temp;
+      temp = temp.next;
+    }
+    tail = pre;
+    tail.next = null;
+    length--;
+    if (length == 0) {
+      head = null;
+      tail = null;
+    }
+    return temp;
+  }
+
   public void printList() {
     Node temp = head;
     while (temp != null) {

@@ -20,5 +20,26 @@ public class Main {
     myLinkedList.getHead();
     myLinkedList.getTail();
     myLinkedList.getLength();
+
+    myLinkedList.removeLast();
+    System.out.println("\nLinked List:");
+    myLinkedList.printList();
+    myLinkedList.getHead();
+    myLinkedList.getTail();
+    myLinkedList.getLength();
+
+    myLinkedList.removeLast();
+    System.out.println("\nLinked List:");
+    myLinkedList.printList();
+    myLinkedList.getHead();
+    myLinkedList.getTail();
+    myLinkedList.getLength();
+
+    myLinkedList.removeLast();
+    System.out.println("\nLinked List:");
+    myLinkedList.printList();
+    myLinkedList.getHead();
+    myLinkedList.getTail();
+    myLinkedList.getLength();
   }
 }
