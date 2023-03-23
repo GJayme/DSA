@@ -23,6 +23,17 @@ public class LinkedList {
     length = 1;
   }
 
+  public void append(int value) {
+    var newNode = new Node(value);
+    if (tail != null) {
+      tail.next = newNode;
+    } else {
+      head = newNode;
+    }
+    tail = newNode;
+    length++;
+  }
+
   public void printList() {
     Node temp = head;
     while (temp != null) {

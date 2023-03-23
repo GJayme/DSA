@@ -12,5 +12,13 @@ public class Main {
 
     System.out.println("\nLinked List:");
     myLinkedList.printList();
+
+    myLinkedList.append(5);
+
+    System.out.println("\nLinked List:");
+    myLinkedList.printList();
+    myLinkedList.getHead();
+    myLinkedList.getTail();
+    myLinkedList.getLength();
   }
 }
