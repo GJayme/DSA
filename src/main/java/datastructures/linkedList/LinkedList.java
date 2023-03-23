@@ -34,6 +34,12 @@ public class LinkedList {
     length++;
   }
 
+  public void makeEmpty() {
+    head = null;
+    tail = null;
+    length = 0;
+  }
+
   public void printList() {
     Node temp = head;
     while (temp != null) {
