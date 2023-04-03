@@ -1,6 +1,8 @@
 package datastructures.linkedList;
 
-
+/**
+ * LinkedList a data structure consisting of a collection of nodes which together represent a sequence.
+ */
 public class LinkedList {
 
   private Node head;
@@ -34,6 +36,18 @@ public class LinkedList {
     length++;
   }
 
+  public void prepend(int value) {
+    Node newNode = new Node(value);
+    if (length == 0) {
+      head = newNode;
+      tail = newNode;
+    } else {
+      newNode.next = head;
+      head = newNode;
+    }
+    length++;
+  }
+
   public void makeEmpty() {
     head = null;
     tail = null;
@@ -58,16 +72,16 @@ public class LinkedList {
     return temp;
   }
 
-  public void prepend(int value) {
-    Node newNode = new Node(value);
+  public Node removeFirst() {
+    if (length == 0) return null;
+    Node temp = head;
+    head = head.next;
+    temp.next = null;
+    length--;
     if (length == 0) {
-      head = newNode;
-      tail = newNode;
-    } else {
-      newNode.next = head;
-      head = newNode;
+      tail = null;
     }
-    length++;
+    return temp;
   }
 
   public void printList() {
