@@ -4,42 +4,19 @@ public class Main {
 
   public static void main(String[] args) {
 
-    LinkedList myLinkedList = new LinkedList(4);
+    LinkedList myLinkedList = new LinkedList(2);
+    myLinkedList.prepend(3);
 
-    myLinkedList.getHead();
-    myLinkedList.getTail();
-    myLinkedList.getLength();
-
-    System.out.println("\nLinked List:");
     myLinkedList.printList();
 
-    myLinkedList.append(5);
+    myLinkedList.makeEmpty();
 
-    System.out.println("\nLinked List:");
+    System.out.printf("Empty");
     myLinkedList.printList();
-    myLinkedList.getHead();
-    myLinkedList.getTail();
-    myLinkedList.getLength();
 
-    myLinkedList.removeLast();
-    System.out.println("\nLinked List:");
-    myLinkedList.printList();
-    myLinkedList.getHead();
-    myLinkedList.getTail();
-    myLinkedList.getLength();
+    myLinkedList.prepend(1);
 
-    myLinkedList.removeLast();
-    System.out.println("\nLinked List:");
     myLinkedList.printList();
-    myLinkedList.getHead();
-    myLinkedList.getTail();
-    myLinkedList.getLength();
 
-    myLinkedList.removeLast();
-    System.out.println("\nLinked List:");
-    myLinkedList.printList();
-    myLinkedList.getHead();
-    myLinkedList.getTail();
-    myLinkedList.getLength();
   }
 }
