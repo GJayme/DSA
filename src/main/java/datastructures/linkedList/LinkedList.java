@@ -92,6 +92,17 @@ public class LinkedList {
     }
   }
 
+  public Node get(int index) {
+    if (index < 0 || index >= length) {
+      return null;
+    }
+    Node temp = head;
+    for (int i = 0; i < index; i++) {
+       temp = temp.next;
+    }
+    return temp;
+  }
+
   public void getHead() {
     if (head == null) {
       System.out.println("Head: null");
