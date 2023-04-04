@@ -54,6 +54,20 @@ public class LinkedList {
     length = 0;
   }
 
+  public Node remove(int index) {
+    if (index < 0 || index >= length) return null;
+    if (index == 0) return removeFirst();
+    if (index == length -1) return removeLast();
+
+    Node prev = get(index -1);
+    Node temp = prev.next;
+
+    prev.next = temp.next;
+    temp.next = null;
+    length--;
+    return temp;
+  }
+
   public Node removeLast() {
     if (head == null) return null;
     Node temp = head;
@@ -95,12 +109,10 @@ public class LinkedList {
 
   public boolean insert (int index, int value) {
     if (index < 0 || index > length) return false;
-
     if (index == 0) {
       prepend(value);
       return true;
     }
-
     if (index == length) {
       append(value);
       return true;
@@ -108,6 +120,7 @@ public class LinkedList {
 
     Node newNode = new Node(value);
     Node temp = get(index - 1);
+
     newNode.next = temp.next;
     temp.next = newNode;
     length++;
