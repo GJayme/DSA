@@ -84,14 +84,6 @@ public class LinkedList {
     return temp;
   }
 
-  public void printList() {
-    Node temp = head;
-    while (temp != null) {
-      System.out.println(temp.value);
-      temp = temp.next;
-    }
-  }
-
   public boolean set(int index, int value) {
     Node temp = get(index);
     if (temp != null) {
@@ -99,6 +91,27 @@ public class LinkedList {
       return false;
     }
     return false;
+  }
+
+  public boolean insert (int index, int value) {
+    if (index < 0 || index > length) return false;
+
+    if (index == 0) {
+      prepend(value);
+      return true;
+    }
+
+    if (index == length) {
+      append(value);
+      return true;
+    }
+
+    Node newNode = new Node(value);
+    Node temp = get(index - 1);
+    newNode.next = temp.next;
+    temp.next = newNode;
+    length++;
+    return true;
   }
 
   public Node get(int index) {
@@ -132,4 +145,11 @@ public class LinkedList {
     System.out.println("Length: " + length);
   }
 
+  public void printList() {
+    Node temp = head;
+    while (temp != null) {
+      System.out.println(temp.value);
+      temp = temp.next;
+    }
+  }
 }
