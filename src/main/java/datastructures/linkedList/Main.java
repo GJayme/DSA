@@ -11,7 +11,9 @@ public class Main {
 
     myLinkedList.printList();
 
-    System.out.println(myLinkedList.get(2).value);
+    myLinkedList.set(2, 10);
 
+    System.out.println("\n");
+    myLinkedList.printList();
   }
 }
