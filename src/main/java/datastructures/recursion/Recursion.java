@@ -7,8 +7,11 @@ final class Recursion {
     if (integerArray.size() == 1) {
       return integerArray.stream().findFirst().get();
     }
-    int firstElement = integerArray.remove(0);
-    return firstElement + sumIntegerArray(integerArray);
+    ArrayList<Integer> newArrayInteger = new ArrayList<>(integerArray);
+
+    int firstElement = newArrayInteger.get(0);
+    newArrayInteger.remove(0);
+    return firstElement + sumIntegerArray(newArrayInteger);
   }
 
   public static int sizeArray(ArrayList<Integer> arrayList) {

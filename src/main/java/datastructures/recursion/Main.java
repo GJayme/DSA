@@ -13,6 +13,7 @@ public class Main {
 
     System.out.println(Recursion.sumIntegerArray(arrayList));
     System.out.printf("\n");
+    System.out.println(arrayList);
     ArrayList<Integer> arrayList2 = new ArrayList<>();
     arrayList2.add(1);
     arrayList2.add(1);
