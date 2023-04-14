@@ -11,5 +11,13 @@ final class Recursion {
     return firstElement + sumIntegerArray(integerArray);
   }
 
+  public static int sizeArray(ArrayList<Integer> arrayList) {
+    if (arrayList.isEmpty()) {
+      return 0;
+    }
+    arrayList.remove(0);
+    return 1 + sizeArray(arrayList);
+  }
+
   private Recursion() {}
 }

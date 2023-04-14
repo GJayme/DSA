@@ -10,7 +10,23 @@ public class Main {
     arrayList.add(3);
     arrayList.add(4);
     arrayList.add(5);
+
     System.out.println(Recursion.sumIntegerArray(arrayList));
+    System.out.printf("\n");
+    ArrayList<Integer> arrayList2 = new ArrayList<>();
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    arrayList2.add(1);
+    System.out.println(Recursion.sizeArray(arrayList2));
+
+
 
 
   }
